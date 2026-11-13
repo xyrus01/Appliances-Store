@@ -666,3 +666,158 @@ body{
     background-color: var(--button);
     color: var(--white);
 }
+
+/* These pages manage their own spacing, so remove the 4vw side padding from body */
+body.auth_page{
+    padding: 0;
+}
+
+/* The card both forms use */
+.auth_card{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    padding: 2vw;
+    background-color: var(--white);
+    border: 1px solid var(--disabled);
+    color: var(--primary);
+}
+.auth_title{
+    font-size: 1.5rem;
+}
+.auth_card .field label{
+    font-size: 14px;
+    font-weight: 500;
+}
+.auth_card .field input::placeholder{
+    color: var(--disabled);
+}
+.auth_card .field_error{
+    text-align: left;
+}
+
+/* Main button */
+.auth_button{
+    width: 100%;
+    height: 2.8vw;
+    min-height: 44px;
+    border: none;
+    background-color: var(--button);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* "Don't have an account? Create one" line */
+.auth_switch{
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
+.auth_switch a{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--button);
+}
+.auth_switch a:hover{
+    text-decoration: underline;
+}
+
+/* ___________LOGIN */
+.login_page{
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    min-height: 100vh;
+}
+.login_left{
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+    padding: 4vh 4vw;
+    background-color: var(--white);
+    color: var(--primary);
+}
+.auth_brand{
+    justify-content: flex-start;
+    gap: 1vw;
+}
+.auth_brand .logo{
+    min-width: 40px;
+}
+.login_welcome h1{
+    line-height: 1.2;
+}
+.login_left .auth_card{
+    width: 100%;
+    max-width: 470px;
+    margin-left: 2vw;     /* pushes the card in from the left edge, like the design */
+}
+
+.login_right{
+    display: flex;
+    padding: 4vh 3vw;
+    background-color: var(--primary);
+}
+.hero{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1vh;
+    padding: 2vw;
+    border-radius: 24px;
+    background-color: var(--background);
+    color: var(--primary);
+}
+.hero_image{
+    flex: 1;              /* takes all the free space above the text */
+}
+.hero h1{
+    line-height: 1.3;
+}
+
+/* ___________SIGNUP */
+.signup_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4vh 4vw;
+}
+.signup_page .auth_card{
+    width: 42vw;
+    min-width: 320px;
+    max-width: 600px;
+    padding: 3vw;
+}
+.signup_intro{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+.signup_intro .auth_title{
+    margin-top: 2vh;
+    font-size: 2rem;
+}
+
+/* ___________AUTH: small screens */
+@media (max-width: 800px){
+    .login_page{
+        grid-template-columns: 1fr;
+    }
+    .login_right{
+        display: none;
+    }
+    .login_left .auth_card{
+        margin-left: 0;
+        padding: 5vw;
+    }
+    .signup_page .auth_card{
+        width: 100%;
+        padding: 5vw;
+    }
+    .auth_button{
+        height: 44px;
+    }
+}
