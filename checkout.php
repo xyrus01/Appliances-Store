@@ -39,9 +39,9 @@ $total = $subtotal + $shippingFee;
 
 // 3. Payment options (the key is what gets submitted, the rest is display text)
 $paymentOptions = [
-    'cod'     => ['Cash on Delivery', 'Pay when your appliance arrives.'],
-    'ewallet' => ['E-Wallet',         'Pay using an available supported e-wallet.'],
-    'bank'    => ['Bank Transfer',    'Pay through an available bank transfer option.'],
+    'cod'     => ['Cash on Delivery', 'Pay when your appliance arrives.',               'cash.svg'],
+    'ewallet' => ['E-Wallet',         'Pay using an available supported e-wallet.',     'ewallet.svg'],
+    'bank'    => ['Bank Transfer',    'Pay through an available bank transfer option.', 'bank.svg'],
 ];
 
 // 4. Get the logged-in user's saved info (the id comes from the session)
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="cart_page">
 
         <!-- Title + stepper -->
-        <div class="checkout_top">
+        <div class="page_top">
             <div class="cart_header">
                 <h1>Checkout</h1>
                 <p class="small">Complete your delivery and payment information to place your order.</p>
@@ -137,7 +137,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="stepper row border">
                 <a href="cart.php" class="step done row">
-                    <span class="step_circle">&#10003;</span>
+                    <div class="step_circle row logo">
+                        <img src="images/icons/check.svg" alt="">
+                    </div>
                     <p>Shopping Cart</p>
                 </a>
                 <div class="step_line done"></div>
@@ -163,7 +165,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Delivery Information -->
                 <div class="checkout_card border">
                     <div class="card_header">
-                        <div class="icon_tile border"></div>
+                        <div class="icon_tile border row">
+                            <img src="images/icons/delivery.svg">
+                        </div>
                         <div>
                             <h3 class="bold">Delivery Information</h3>
                             <p class="small">Where should we deliver your appliances?</p>
@@ -225,7 +229,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Payment Method -->
                 <div class="checkout_card border">
                     <div class="card_header">
-                        <div class="icon_tile border"></div>
+                        <div class="icon_tile border row">
+                            <img src="images/icons/payment.svg">
+                        </div>
                         <div>
                             <h3 class="bold">Payment Method</h3>
                             <p class="small">Choose how you would like to pay.</p>
@@ -235,7 +241,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="payment_options">
                         <?php foreach ($paymentOptions as $key => $option): ?>
                             <label class="payment_option border">
-                                <div class="icon_tile border"></div>
+                                <div class="icon_tile border row">
+                                    <img src="images/icons/<?= htmlspecialchars($option[2]) ?>" alt="">
+                                </div>
                                 <div class="payment_text">
                                     <p class="bold"><?= htmlspecialchars($option[0]) ?></p>
                                     <p class="small"><?= htmlspecialchars($option[1]) ?></p>

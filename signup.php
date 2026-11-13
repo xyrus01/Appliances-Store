@@ -97,9 +97,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <form method="post" action="signup.php" class="auth_card border" novalidate>
             <div class="signup_intro">
-                <a href="login.php" class="auth_brand row">
-                    <div class="logo border"></div>
-                    <h3>APPLIANCES STORE</h3>
+                <a href="login.php" class="auth_brand button row">
+                    <div class="logo row">
+                        <img src="images/icons/logo.png">
+                    </div>
+                    <h3>Averra Home</h3>
                 </a>
                 <h2 class="auth_title">Create your account</h2>
                 <p class="small">Register to start exploring our appliance collection</p>

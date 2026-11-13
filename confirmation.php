@@ -57,6 +57,13 @@ $paymentLabels = [
 ];
 $paymentLabel = $paymentLabels[$checkout['payment']] ?? 'Unknown';
 
+$paymentIcons = [
+    'cod'     => 'cash.svg',
+    'ewallet' => 'ewallet.svg',
+    'bank'    => 'bank.svg',
+];
+$paymentIcon = $paymentIcons[$checkout['payment']] ?? '';
+
 // 5. Invoice details. No orders table exists, so the numbers are generated here.
 $suffix    = random_int(100, 999);
 $invoiceNo = 'INV-' . date('Ymd') . '-' . $suffix;
@@ -88,7 +95,9 @@ unset($_SESSION['checkout']);
 
         <!-- Success message -->
         <div class="confirm_top column">
-            <div class="success_icon row">&#10003;</div>
+            <div class="success_icon row">
+                <img src="images/icons/check.svg" alt="">
+            </div>
             <h1 class="bold">Order Confirmation!</h1>
             <?php if ($checkout['payment'] === 'cod'): ?>
                 <p>Please pay once you received your order.</p>
@@ -102,9 +111,11 @@ unset($_SESSION['checkout']);
 
             <div class="invoice_header row">
                 <div class="invoice_brand row">
-                    <div class="logo border"></div>
+                    <div class="logo border row">
+                        <img src="images/icons/logo.png">
+                    </div>
                     <div>
-                        <h3 class="bold">Appliance Store</h3>
+                        <h3 class="bold">Averra Home</h3>
                         <p class="small">Smart Choices. Better Living.</p>
                     </div>
                 </div>
@@ -185,7 +196,11 @@ unset($_SESSION['checkout']);
             <!-- Payment + totals -->
             <div class="invoice_footer">
                 <div class="payment_method border row">
-                    <div class="icon_tile payment_icon border"></div>
+                    <div class="icon_tile payment_icon border row">
+                        <?php if ($paymentIcon !== ''): ?>
+                            <img src="images/icons/<?= htmlspecialchars($paymentIcon) ?>" alt="">
+                        <?php endif; ?>
+                    </div>
                     <div>
                         <p class="small">Payment Method</p>
                         <p class="bold"><?= htmlspecialchars($paymentLabel) ?></p>

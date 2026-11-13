@@ -69,7 +69,7 @@ $products = $stmt->fetchAll();
                         <form method="post" action="add_to_cart.php">
                             <input type="hidden" name="product_id" value="<?= (int)$p['id'] ?>">
                             <input type="hidden" name="category_id" value="<?= htmlspecialchars($categoryId) ?>">
-                            <button type="submit" class="button border">Add to Cart</button>
+                            <button type="submit" class="button lg border">Add to Cart</button>
                         </form>
                     </div>
                 <?php endforeach; ?>

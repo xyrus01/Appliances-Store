@@ -47,9 +47,30 @@ $total    = $subtotal + $shipping;
     <?php require 'navbar.php'; ?>
 
     <div class="cart_page">
-        <div class="cart_header">
-            <h1>Shopping Cart</h1>
-            <p class="small">Review your selected appliances before proceeding to checkout.</p>
+        <div class="page_top">
+            <div class="cart_header">
+                <h1>Shopping Cart</h1>
+                <p class="small">Review your selected appliances before proceeding to checkout.</p>
+            </div>
+
+            <div class="stepper row border">
+                <div class="step active row">
+                    <span class="step_circle">1</span>
+                    <p class="bold">Shopping Cart</p>
+                </div>
+                <div class="step_line"></div>
+
+                <div class="step row">
+                    <span class="step_circle">2</span>
+                    <p>Checkout</p>
+                </div>
+                <div class="step_line"></div>
+
+                <div class="step row">
+                    <span class="step_circle">3</span>
+                    <p>Order Confirmation</p>
+                </div>
+            </div>
         </div>
 
         <div class="cart_layout">

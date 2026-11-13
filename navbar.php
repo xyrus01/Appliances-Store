@@ -21,14 +21,16 @@ $u = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <header class="navbar row">
     <a href="categories.php" class="navbar_brand button row">
-        <div class="logo"></div>
-        <h3>Appliance Store</h3>
+        <div class="logo row">
+            <img src="images/icons/logo.png">
+        </div>
+        <h3>Averra Home</h3>
     </a>
 
     <div class="navbar_links row">
         <p>Hello, <?= htmlspecialchars($u['name'] ?? 'Guest') ?></p>
-        <a href="cart.php" class="cart logo row button">
-            <img src="images/cart.png">
+        <a href="cart.php" class="cart logo row button sm">
+            <img src="images/icons/cart.svg">
         </a>
 
         <a class="logout button row border" href="logout.php"><p>Log out</p></a>

@@ -64,13 +64,14 @@ body{
 .border{
     border-radius:12px;
 }
-.button{
-    transition: .1s;
+.button {
     cursor: pointer;
+    --w: 320; transition: transform 0.2s;
 }
-.button:hover{
-    transform: scale(1.05);
-}
+.button.sm { --w: 60; }
+.button.lg { --w: 180; }
+
+.button:hover { transform: scale(calc(1 + 8 / var(--w))); }
 
 /* ___________NAVBAR */
 .navbar{
@@ -90,9 +91,10 @@ body{
     background-color: var(--button);
     width: 3vw;
     aspect-ratio: 1/1;
+    border-radius: 12px;
 }
 .logo img{
-    width: 60%;
+    width: 100%;
     aspect-ratio: 1/1;
 }
 .navbar_links{
@@ -337,7 +339,7 @@ body{
 }
 
 /* ___________CHECKOUT */
-.checkout_top{
+.page_top{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -478,6 +480,12 @@ body{
     border-color: var(--button);
     background-color: var(--background);
 }
+.payment_option:has(input:checked) .icon_tile{
+    background-color: var(--button);
+}
+.payment_option:has(input:checked) .icon_tile img{
+    filter: brightness(0) invert(1);
+}
 .payment_text{
     flex: 1;
 }
@@ -540,6 +548,9 @@ body{
     color: var(--white);
     font-size: 2rem;
     margin-bottom: 1vh;
+}
+.success_icon img{
+    width: 110%;
 }
 
 /* Invoice card */
@@ -642,6 +653,9 @@ body{
 }
 .payment_icon{
     background-color: var(--button);
+}
+.payment_icon img{
+    filter: brightness(0) invert(1);
 }
 .invoice_totals{
     width: 24vw;
@@ -751,7 +765,7 @@ body.auth_page{
 .login_left .auth_card{
     width: 100%;
     max-width: 470px;
-    margin-left: 2vw;     /* pushes the card in from the left edge, like the design */
+    margin-left: 2vw;
 }
 
 .login_right{
@@ -766,12 +780,11 @@ body.auth_page{
     justify-content: flex-end;
     gap: 1vh;
     padding: 2vw;
-    border-radius: 24px;
     background-color: var(--background);
     color: var(--primary);
 }
 .hero_image{
-    flex: 1;              /* takes all the free space above the text */
+    flex: 1;
 }
 .hero h1{
     line-height: 1.3;

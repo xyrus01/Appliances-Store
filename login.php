@@ -49,9 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <!-- Left: brand, welcome text, form card -->
         <div class="login_left">
-            <a href="login.php" class="auth_brand row">
-                <div class="logo border"></div>
-                <h3>APPLIANCES STORE</h3>
+            <a href="login.php" class="auth_brand row button lg">
+                <div class="logo row">
+                    <img src="images/icons/logo.png">
+                </div>
+                <h3>Averra Home</h3>
             </a>
 
             <div class="login_welcome">
@@ -80,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php endif; ?>
                 </div>
 
-                <button type="submit" class="auth_button button border">Log In</button>
+                <button type="submit" class="auth_button button lg border">Log In</button>
 
                 <p class="auth_switch">Don't have an account? <a href="signup.php">Create one</a></p>
             </form>
