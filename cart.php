@@ -49,7 +49,7 @@ $total    = $subtotal + $shipping;
     <div class="cart_page">
         <div class="page_top">
             <div class="cart_header">
-                <h1>Shopping Cart</h1>
+                <h2>Shopping Cart</h2>
                 <p class="small">Review your selected appliances before proceeding to checkout.</p>
             </div>
 
@@ -81,7 +81,9 @@ $total    = $subtotal + $shipping;
 
                 <?php if (empty($items)): ?>
                     <div class="cart_empty row">
-                        <div class="image border"></div>
+                        <div class="image border logo row">
+                            <img src="images/icons/error.svg">
+                        </div>
                         <div class="cart_empty_text">
                             <h2>Your Cart is empty.</h2>
                             <p class="small">Looks like you haven't added any appliances yet.</p>

@@ -209,9 +209,6 @@ body{
     flex-direction: column;
     gap: 3vh;
 }
-.cart_header h1{
-    font-size: 2rem;
-}
 .cart_layout{
     display: grid;
     grid-template-columns: 1fr 24vw;
@@ -702,9 +699,6 @@ body.auth_page{
     border: 1px solid var(--disabled);
     color: var(--primary);
 }
-.auth_title{
-    font-size: 1.5rem;
-}
 .auth_card .field label{
     font-size: 14px;
     font-weight: 500;
@@ -715,9 +709,13 @@ body.auth_page{
 .auth_card .field_error{
     text-align: left;
 }
+.auth_card .welcome{
+    margin-bottom: 4vh;
+}
 
 /* Main button */
 .auth_button{
+    margin-top: 4vh;
     width: 100%;
     height: 2.8vw;
     min-height: 44px;
@@ -765,13 +763,10 @@ body.auth_page{
 .auth_brand .logo{
     min-width: 40px;
 }
-.login_welcome h1{
-    line-height: 1.2;
-}
 .login_left .auth_card{
     width: 100%;
     max-width: 470px;
-    margin-left: 2vw;
+    margin: auto;
 }
 
 .login_right{
@@ -780,6 +775,8 @@ body.auth_page{
     background-color: var(--primary);
 }
 .hero{
+    overflow: hidden;
+    position:relative;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -792,9 +789,10 @@ body.auth_page{
     border: 1px solid var(--background);
 
     background: 
-        linear-gradient(to top, var(--background), rgba(234, 242, 250, 0) 50%),
-        url("images/hero.png") center / cover no-repeat;
+        linear-gradient(to top, var(--background), rgba(234, 242, 250, 0.1) 50%),
+        url("images/hero1.png") center / cover no-repeat;
 }
+
 .hero_image{
     flex: 1;
     

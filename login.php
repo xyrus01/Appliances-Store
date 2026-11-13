@@ -55,14 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <h3>Averra Home</h3>
             </a>
-
-            <div class="login_welcome">
-                <h1>WELCOME BACK!</h1>
-                <p class="small">Log in to continue to your account.</p>
-            </div>
-
             <form method="post" action="login.php" class="auth_card border" novalidate>
-                <h2 class="auth_title">Log In</h2>
+                <div class="welcome">
+                    <h2>Welcome Back!</h2>
+                    <p class="small">Log in to continue to your account.</p>
+                </div>    
 
                 <div class="field">
                     <label for="email">Email</label>
@@ -92,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login_right">
             <div class="hero border">
                 <div class="hero_image"></div>
-                <h1>EVERYTHING YOU NEED FOR YOUR HOME</h1>
+                <h1>EVERYTHING YOU NEED FOR YOU HOME</h1>
                 <p>Explore essential appliances designed to make everyday living easier.</p>
             </div>
         </div>
