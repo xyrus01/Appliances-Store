@@ -30,8 +30,8 @@
 
         <div class="selection row">
             <div class="cards column border">
-                <div class="image border">
-                    <img src="" alt="">
+                <div class="image row border">
+                    <img src="images/kitchen.png">
                 </div>
                 <div class="text">
                     <h3>Kitchen Appliances</h3>
@@ -42,8 +42,8 @@
             </div>
 
             <div class="cards column border">
-                <div class="image border">
-                    <img src="">
+                <div class="image row border">
+                    <img src="images/home.png">
                 </div>
                 <div class="text">
                     <h3>Home Appliances</h3>
@@ -54,8 +54,8 @@
             </div>
 
             <div class="cards column border">
-                <div class="image border">
-                    <img src="" alt="">
+                <div class="image row border">
+                    <img src="images/personal.png">
                 </div>
                 <div class="text">
                     <h3>Personal Appliances</h3>

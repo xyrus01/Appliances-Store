@@ -139,6 +139,12 @@ body{
     background-color: var(--background);
     height: 70%;
     width: 100%;
+
+    overflow: hidden;
+}
+.cards .image img{
+    width: 100%;
+    height: auto;
 }
 .cards .button{
     height: 2.6vw;
@@ -782,9 +788,16 @@ body.auth_page{
     padding: 2vw;
     background-color: var(--background);
     color: var(--primary);
+
+    border: 1px solid var(--background);
+
+    background: 
+        linear-gradient(to top, var(--background), rgba(234, 242, 250, 0) 50%),
+        url("images/hero.png") center / cover no-repeat;
 }
 .hero_image{
     flex: 1;
+    
 }
 .hero h1{
     line-height: 1.3;
