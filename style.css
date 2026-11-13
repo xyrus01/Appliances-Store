@@ -526,3 +526,143 @@ body{
     flex-direction: column;
     gap: 1.5vh;
 }
+
+.confirm_top{
+    gap: 1vh;
+    text-align: center;
+}
+.success_icon{
+    width: 5vw;
+    min-width: 56px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--success);
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+/* Invoice card */
+.invoice{
+    width: 70%;
+    margin: 0 auto;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+}
+.invoice_header{
+    justify-content: space-between;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid var(--primary);
+}
+.invoice_brand{
+    gap: 1vw;
+}
+.invoice_badge{
+    padding: 0.2vw 1.2vw;
+    background-color: var(--background);
+    color: var(--button);
+    letter-spacing: 0.1em;
+}
+
+/* Customer + invoice information */
+.invoice_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+}
+.info_block{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vh;
+}
+.info_block h3{
+    margin-bottom: 0.8vh;
+}
+.info_block + .info_block{
+    padding-left: 2vw;
+    border-left: 1px solid var(--primary);
+}
+.info_row{
+    display: grid;
+    grid-template-columns: 7vw 1fr;
+    gap: 1vw;
+}
+.info_row p{
+    font-size: 14px;
+}
+
+/* Items table */
+.invoice_table{
+    display: flex;
+    flex-direction: column;
+}
+.table_row{
+    display: grid;
+    grid-template-columns: 1fr 10vw 8vw 10vw;
+    align-items: center;
+    padding: 1.2vh 1vw;
+}
+.table_row p:nth-child(n+2){
+    text-align: center;
+}
+.table_row p:last-child{
+    text-align: right;
+}
+.table_head{
+    background-color: var(--background);
+}
+.table_item{
+    padding: 2vh 1vw;
+    border-bottom: 1px solid var(--primary);
+}
+.table_product{
+    justify-content: flex-start;
+    gap: 1vw;
+}
+.table_product > div:last-child{
+    text-align: left;
+}
+
+/* Payment + totals */
+.invoice_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 3vh;
+    border-top: 1px solid var(--primary);
+}
+.payment_method{
+    gap: 1vw;
+    padding: 1vw 1.5vw;
+    background-color: var(--background);
+}
+.payment_icon{
+    background-color: var(--button);
+}
+.invoice_totals{
+    width: 24vw;
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    background-color: var(--background);
+}
+
+/* Buttons under the invoice */
+.confirm_actions{
+    gap: 1vw;
+}
+.confirm_actions .button{
+    width: 15vw;
+    height: 2.8vw;
+    min-height: 40px;
+    border: 1px solid var(--button);
+}
+.action_filled{
+    background-color: var(--button);
+    color: var(--white);
+}
